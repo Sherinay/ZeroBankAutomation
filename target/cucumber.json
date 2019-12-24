@@ -1,0 +1,158 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "the user is logged in",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 14284427200,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is logged in",
+            "match": {
+              "location": "AccountActivityNavigationStepDefs.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2019-12-24T21:23:24.938Z",
+        "before": [
+          {
+            "result": {
+              "duration": 99720600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Available currencies",
+        "description": "",
+        "id": "purchase-foreign-currency;available-currencies",
+        "after": [
+          {
+            "result": {
+              "duration": 2559051900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1294332300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user accesses the Purchase foreign currency cash tab",
+            "match": {
+              "location": "PurchaseForeignCurrencyStepDefs.the_user_accesses_the_Purchase_foreign_currency_cash_tab()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2383772700,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "following currencies should be available",
+            "match": {
+              "location": "PurchaseForeignCurrencyStepDefs.following_currencies_should_be_available(String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Australia (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Canada (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Switzerland (franc)"
+                ]
+              },
+              {
+                "cells": [
+                  "China (yuan)"
+                ]
+              },
+              {
+                "cells": [
+                  "Denmark (krone)"
+                ]
+              },
+              {
+                "cells": [
+                  "Eurozone (euro)"
+                ]
+              },
+              {
+                "cells": [
+                  "Great Britain (pound)"
+                ]
+              },
+              {
+                "cells": [
+                  "Japan (yen)"
+                ]
+              },
+              {
+                "cells": [
+                  "Mexico (peso)"
+                ]
+              },
+              {
+                "cells": [
+                  "Norway (krone)"
+                ]
+              },
+              {
+                "cells": [
+                  "New Zealand (dollar)"
+                ]
+              },
+              {
+                "cells": [
+                  "Singapore (dollar)"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Purchase Foreign Currency",
+    "description": "",
+    "id": "purchase-foreign-currency",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/PurchaseForeignCurrency.feature",
+    "tags": []
+  }
+]
