@@ -15,6 +15,7 @@ public class LoginPage {
     @FindBy(xpath = "//button[@id='signin_button']")
     public WebElement signIn;
 
+
     @FindBy(xpath = "//input[@id='user_login']")
     public WebElement userNameInput;
 

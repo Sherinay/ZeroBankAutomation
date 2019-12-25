@@ -71,17 +71,18 @@ public class FindTransactionsStepDefs {
         List<String> originalDates = new ArrayList<>();
         for (WebElement date : dates) {
             originalDates.add(date.getText().replace("-", ""));
-
+        }
             List<String> tempDates = originalDates;
             Collections.reverse(tempDates);
             Assert.assertEquals(tempDates, originalDates);
 
+
             System.out.println("Original Dates " + originalDates);
-            Collections.reverse(tempDates);
+
             System.out.println("Temperary sorted Dates " + tempDates);
 
 
-        }
+
     }
 
     @Then("the results table should only not contain transactions dated {string}")

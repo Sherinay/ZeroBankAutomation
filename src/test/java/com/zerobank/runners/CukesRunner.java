@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         plugin = {"json:target/cucumber.json"},
         features = "src/test/resources/features",
         glue = {"com/zerobank/stepdefnitions"},
-        dryRun = false
+        dryRun = false,
+        tags = "@wip"
 )
 
 public class CukesRunner {
