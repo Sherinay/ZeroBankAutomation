@@ -16,11 +16,13 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.*;
 
 public class FindTransactionsStepDefs {
+    AccountSummaryPage accountSummaryPage = new AccountSummaryPage();
+    AccountActivityPage accountActivityPage = new AccountActivityPage();
+
     @Given("the user accesses the Find Transactions tab")
     public void the_user_accesses_the_Find_Transactions_tab() {
-        AccountSummaryPage accountSummaryPage = new AccountSummaryPage();
+
         accountSummaryPage.clickAccntActivity();
-        AccountActivityPage accountActivityPage = new AccountActivityPage();
         Assert.assertTrue(accountActivityPage.findTransaction.isEnabled());
         accountActivityPage.clickFindTrans();
     }
@@ -28,7 +30,7 @@ public class FindTransactionsStepDefs {
     @When("the user enters date range from {string} to {string}")
     public void the_user_enters_date_range_from_to(String startDate, String endDate) {
 
-        AccountActivityPage accountActivityPage = new AccountActivityPage();
+
         BrowserUtils.waitFor(1);
         accountActivityPage.enterDates(startDate, endDate);
 
@@ -36,7 +38,7 @@ public class FindTransactionsStepDefs {
 
     @When("clicks search")
     public void clicks_search() throws InterruptedException {
-        AccountActivityPage accountActivityPage = new AccountActivityPage();
+
         Thread.sleep(2000);
         accountActivityPage.clickFind();
         Thread.sleep(5000);
@@ -99,7 +101,7 @@ public class FindTransactionsStepDefs {
 
     @When("the user enters description {string}")
     public void the_user_enters_description_ONLINE(String desctiption) throws InterruptedException {
-        AccountActivityPage accountActivityPage = new AccountActivityPage();
+
         Thread.sleep(2000);
         accountActivityPage.enterDescription(desctiption);
     }
@@ -139,7 +141,7 @@ public class FindTransactionsStepDefs {
 
     @When("user selects type {string}")
     public void user_selects_type_Deposit(String type) {
-        AccountActivityPage accountActivityPage = new AccountActivityPage();
+
         accountActivityPage.selecFromtheDropdown(type);
         System.out.println("Selected option "+accountActivityPage.selectedOption());
     }

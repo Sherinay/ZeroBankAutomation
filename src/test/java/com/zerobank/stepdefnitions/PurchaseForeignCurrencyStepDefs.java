@@ -16,19 +16,21 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class PurchaseForeignCurrencyStepDefs {
+    AccountSummaryPage accountSummaryPage = new AccountSummaryPage();
+    PayBillPage payBillPage = new PayBillPage();
+
     @Given("the user accesses the Purchase foreign currency cash tab")
     public void the_user_accesses_the_Purchase_foreign_currency_cash_tab() {
-        AccountSummaryPage accountSummaryPage = new AccountSummaryPage();
+
         accountSummaryPage.gotoPayBills();
         BrowserUtils.waitFor(1);
-        PayBillPage payBillPage = new PayBillPage();
         payBillPage.clickPurchaseForeignCurrency();
 
     }
 
     @Then("following currencies should be available")
     public void following_currencies_should_be_available(List<String> listCountries) {
-        PayBillPage payBillPage = new PayBillPage();
+
         BrowserUtils.waitFor(2);
 
         List<String> arrCountries = new ArrayList<>(listCountries);
@@ -67,7 +69,7 @@ public class PurchaseForeignCurrencyStepDefs {
 
     @When("user tries to calculate cost without selecting a currency")
     public void user_tries_to_calculate_cost_without_selecting_a_currency() {
-        PayBillPage payBillPage = new PayBillPage();
+
         BrowserUtils.waitFor(2);
 
         System.out.println(payBillPage.selectOption().getFirstSelectedOption().getText());
@@ -80,7 +82,7 @@ public class PurchaseForeignCurrencyStepDefs {
 
     @Then("error message should be displayed")
     public void error_message_should_be_displayed() {
-        PayBillPage payBillPage = new PayBillPage();
+
         BrowserUtils.waitFor(2);
         String alertMsg = Driver.HandlingAlert().getText();
         System.out.println(alertMsg);
@@ -92,8 +94,8 @@ public class PurchaseForeignCurrencyStepDefs {
 
     @When("user tries to calculate cost without entering a value")
     public void user_tries_to_calculate_cost_without_entering_a_value() {
-       PayBillPage payBillPage = new PayBillPage();
-       BrowserUtils.waitFor(2);
+
+        BrowserUtils.waitFor(2);
 
         System.out.println(payBillPage.amountBox.getAttribute("value"));
         if (payBillPage.amountBox.getAttribute("value").isEmpty()) {
