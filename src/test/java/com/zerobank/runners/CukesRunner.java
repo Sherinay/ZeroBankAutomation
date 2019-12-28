@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"json:target/cucumber.json"},
         features = "src/test/resources/features",
-        glue = {"com/zerobank/stepdefnitions"},
+        glue = "com/zerobank/stepdefnitions",
         dryRun = false,
         tags = "@wip"
 )

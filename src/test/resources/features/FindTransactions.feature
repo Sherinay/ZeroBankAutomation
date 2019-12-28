@@ -1,11 +1,9 @@
-@FindTransaction
 Feature: Find Transactions in Account Activity
 
 
     Background: the user is logged in
     Given the user is logged in
 
-  @wip
   Scenario: Search date range
     Given the user accesses the Find Transactions tab
     When the user enters date range from "2012-09-01" to "2012-09-06"
@@ -15,6 +13,7 @@ Feature: Find Transactions in Account Activity
     When the user enters date range from "2012-09-02" to "2012-09-06"
     And clicks search
     And the results table should only not contain transactions dated "2012-09-01"
+
 
 
   Scenario: Search description

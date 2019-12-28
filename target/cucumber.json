@@ -3,32 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "line": 5,
-        "name": "the user is logged in",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 13141228500,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "the user is logged in",
-            "match": {
-              "location": "AccountActivityNavigationStepDefs.the_user_is_logged_in()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2019-12-27T20:27:15.657Z",
+        "start_timestamp": "2019-12-27T22:31:37.322Z",
         "before": [
           {
             "result": {
-              "duration": 103355600,
+              "duration": 129752900,
               "status": "passed"
             },
             "match": {
@@ -36,14 +15,14 @@
             }
           }
         ],
-        "line": 9,
-        "name": "Search date range",
+        "line": 4,
+        "name": "Savings account redirect",
         "description": "",
-        "id": "find-transactions-in-account-activity;search-date-range",
+        "id": "navigating-to-specific-accounts-in-accounts-activity;savings-account-redirect",
         "after": [
           {
             "result": {
-              "duration": 2707359600,
+              "duration": 3581098800,
               "status": "passed"
             },
             "match": {
@@ -56,140 +35,56 @@
         "steps": [
           {
             "result": {
-              "duration": 343974300,
+              "duration": 9286010500,
               "status": "passed"
             },
-            "line": 10,
-            "name": "the user accesses the Find Transactions tab",
+            "line": 5,
+            "name": "the user is logged in",
             "match": {
-              "location": "FindTransactionsStepDefs.the_user_accesses_the_Find_Transactions_tab()"
+              "location": "AccountActivityNavigationStepDefs.the_user_is_logged_in()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1211950900,
+              "duration": 293312100,
               "status": "passed"
             },
-            "line": 11,
-            "name": "the user enters date range from \"2012-09-01\" to \"2012-09-06\"",
+            "line": 6,
+            "name": "the user clicks on Savings link on the Account Summary page",
             "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-01\"",
-                  "offset": 32
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 48
-                }
-              ],
-              "location": "FindTransactionsStepDefs.the_user_enters_date_range_from_to(String,String)"
+              "location": "AccountActivityNavigationStepDefs.the_user_clicks_on_Savings_link_on_the_Account_Summary_page()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 5054104400,
+              "duration": 5304700,
               "status": "passed"
             },
-            "line": 12,
-            "name": "clicks search",
+            "line": 7,
+            "name": "the Account Activity page should be displayed",
             "match": {
-              "location": "FindTransactionsStepDefs.clicks_search()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 67007800,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "results table should only show transactions dates between \"2012-09-01\" to \"2012-09-06\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-01\"",
-                  "offset": 58
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 74
-                }
-              ],
-              "location": "FindTransactionsStepDefs.results_table_should_only_show_transactions_dates_between_to(String,String)"
+              "location": "AccountActivityNavigationStepDefs.the_Account_Activity_page_should_be_displayed()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 23164300,
+              "duration": 473123000,
               "status": "passed"
             },
-            "line": 14,
-            "name": "the results should be sorted by most recent date",
+            "line": 8,
+            "name": "Account drop down should have Savings selected",
             "match": {
-              "location": "FindTransactionsStepDefs.the_results_should_be_sorted_by_most_recent_date()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1129427500,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "the user enters date range from \"2012-09-02\" to \"2012-09-06\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-02\"",
-                  "offset": 32
-                },
-                {
-                  "val": "\"2012-09-06\"",
-                  "offset": 48
-                }
-              ],
-              "location": "FindTransactionsStepDefs.the_user_enters_date_range_from_to(String,String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 5044881500,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "clicks search",
-            "match": {
-              "location": "FindTransactionsStepDefs.clicks_search()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 52826600,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "the results table should only not contain transactions dated \"2012-09-01\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"2012-09-01\"",
-                  "offset": 61
-                }
-              ],
-              "location": "FindTransactionsStepDefs.the_results_table_should_only_not_contain_transactions_dated(String)"
+              "location": "AccountActivityNavigationStepDefs.account_drop_down_should_have_Savings_selected()"
             },
             "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@FindTransaction"
+            "name": "@AccountActivity"
           },
           {
             "name": "@wip"
@@ -197,14 +92,14 @@
         ]
       }
     ],
-    "name": "Find Transactions in Account Activity",
+    "name": "Navigating to specific accounts in Accounts Activity",
     "description": "",
-    "id": "find-transactions-in-account-activity",
+    "id": "navigating-to-specific-accounts-in-accounts-activity",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/FindTransactions.feature",
+    "uri": "file:src/test/resources/features/AccountActivityNavigation.feature",
     "tags": [
       {
-        "name": "@FindTransaction",
+        "name": "@AccountActivity",
         "type": "Tag",
         "location": {
           "line": 1,

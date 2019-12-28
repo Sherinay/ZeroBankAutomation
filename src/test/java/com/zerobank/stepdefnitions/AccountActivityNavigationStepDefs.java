@@ -19,10 +19,10 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class AccountActivityNavigationStepDefs extends BasePage {
-    AccountSummaryPage accountSummaryPage=new AccountSummaryPage();
+    AccountSummaryPage accountSummaryPage = new AccountSummaryPage();
     LoginPage loginPage = new LoginPage();
     AccountActivityPage accountActivityPage = new AccountActivityPage();
-    Select accountList= new Select(accountActivityPage.selectBox);
+
 
     @Given("the user is logged in")
     public void the_user_is_logged_in() {
@@ -36,7 +36,7 @@ public class AccountActivityNavigationStepDefs extends BasePage {
                 to login with invalid information, error message Login and/or password are wrong.
                 should be displayed.
          */
-        try {
+
             Driver.get().get(ConfigurationReader.get("url"));
             Driver.driverMaximize();
 
@@ -53,15 +53,13 @@ public class AccountActivityNavigationStepDefs extends BasePage {
                 System.out.println(eachColumn.getText());
                 Assert.assertTrue(eachColumn.isDisplayed());
             }
-        }catch (Exception e){
-            Assert.assertTrue(getPageTitle().contains("Log in"));
-            System.out.println("Login and/or password are wrong.");
-        }
-
+            
     }
+
 
     @When("the user clicks on Savings link on the Account Summary page")
     public void the_user_clicks_on_Savings_link_on_the_Account_Summary_page() {
+        accountSummaryPage=new AccountSummaryPage();
         accountSummaryPage.clickSavings();
 
     }
@@ -74,7 +72,6 @@ public class AccountActivityNavigationStepDefs extends BasePage {
 
     @Then("Account drop down should have Savings selected")
     public void account_drop_down_should_have_Savings_selected() {
-
         Select accountList= new Select(accountActivityPage.selectBox);
         String displayedAccount=accountList.getFirstSelectedOption().getText();
         System.out.println(displayedAccount);
@@ -83,6 +80,7 @@ public class AccountActivityNavigationStepDefs extends BasePage {
 
     @When("the user clicks on Brokerage link on the Account Summary page")
     public void the_user_clicks_on_Brokerage_link_on_the_Account_Summary_page() {
+
         accountSummaryPage.clickAccntSummary();
         accountSummaryPage.brokerage.click();
 
@@ -90,6 +88,7 @@ public class AccountActivityNavigationStepDefs extends BasePage {
 
     @Then("Account drop down should have Brokerage selected")
     public void account_drop_down_should_have_Brokerage_selected() {
+        Select accountList= new Select(accountActivityPage.selectBox);
         String displayedAccount=accountList.getFirstSelectedOption().getText();
         System.out.println(displayedAccount);
         Assert.assertEquals(displayedAccount,"Brokerage");
@@ -104,7 +103,7 @@ public class AccountActivityNavigationStepDefs extends BasePage {
     @Then("Account drop down should have Checking selected")
     public void account_drop_down_should_have_Checking_selected() {
 
-
+        Select accountList= new Select(accountActivityPage.selectBox);
         String displayedAccount=accountList.getFirstSelectedOption().getText();
         System.out.println(displayedAccount);
         Assert.assertEquals(displayedAccount,"Checking");
@@ -119,6 +118,7 @@ public class AccountActivityNavigationStepDefs extends BasePage {
 
     @Then("Account drop down should have Credit Card selected")
     public void account_drop_down_should_have_Credit_Card_selected() {
+        Select accountList= new Select(accountActivityPage.selectBox);
         String displayedAccount=accountList.getFirstSelectedOption().getText();
         System.out.println(displayedAccount);
         Assert.assertEquals(displayedAccount,"Credit Card");
@@ -131,6 +131,7 @@ public class AccountActivityNavigationStepDefs extends BasePage {
 
     @Then("Account drop down should have Loan selected")
     public void account_drop_down_should_have_Loan_selected() {
+        Select accountList= new Select(accountActivityPage.selectBox);
         String displayedAccount=accountList.getFirstSelectedOption().getText();
         System.out.println(displayedAccount);
         Assert.assertEquals(displayedAccount,"Loan");
